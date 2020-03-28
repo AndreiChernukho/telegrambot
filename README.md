@@ -1,4 +1,4 @@
-# telegrambot
+# Telegrambot
 
 **Для запуска приложения необходимо в командной строке из дериктории где находится pom.xml запустить**
 > mvn spring-boot:run
@@ -35,7 +35,7 @@ POST запрос по адресу localhost:8080/telegrambot/create
 в параметрах city={name:'название города', description:'описание'}
 
 *Пример:*
-> curl -X POST localhost:8080/telegrambot/city/create -H 'Content-type:application/json' -d '{"name": "Город", "description": "Описание"}'
+> curl -X POST localhost:8080/telegrambot/city/create -H 'Content-type:application/json' -d {"name":"Город","description":"Описание"}
 
 ### Изменить данные города:
 PUT запрос по адресу localhost:8080/telegrambot/update
@@ -43,10 +43,12 @@ PUT запрос по адресу localhost:8080/telegrambot/update
 в параметрах city={id:идентификатор; name:'название города', description:'описание'}
 
 *Пример:*
-> curl -X PUT localhost:8080/telegrambot/city/update -H 'Content-type:application/json' -d '{"name": "Город", "description": "Описание"}'
+> curl -X PUT localhost:8080/telegrambot/city/update -H 'Content-type:application/json' -d {"id":"c443bb81-49bf-44a1-ac7d-47b0c7845a37","name":"Новое название","description":"Описание"}
 
 ## Запуск бота:
 Для запуск бота перейдите в телеграме по адресу <http://t.me/VH5PtAR2U2PsszsTnSlpUyjA0_bot>
+
+Нажмите начать и введите например: Москва
 
 Имя бота: VH5PtAR2U2PsszsTnSlpUyjA0_bot
 

@@ -14,10 +14,10 @@ curl -X GET localhost:8080/telegrambot/cities
 
 Получить город по идентификатору:
 GET запрос по адресу
-localhost:8080/telegrambot/city/{id}
+localhost:8080/telegrambot/city/get/{id}
 id - идентификатор города
 Пример:
-curl -X GET localhost:8080/telegrambot/city/{id}
+curl -X GET localhost:8080/telegrambot/city/get/{id}
 
 Удалить город по идентификатору:
 DELETE запрос по адресу
@@ -31,14 +31,14 @@ POST запрос по адресу
 localhost:8080/telegrambot/create
 в параметрах city={name:'название города', description:'описание'}
 Пример:
-curl -X POST localhost:8080/telegrambot/city/create -H 'Content-type:application/json' -d '{"name": "Мадрид", "description": "gardener"}'
+curl -X POST localhost:8080/telegrambot/city/create -H 'Content-type:application/json' -d '{"name": "Город", "description": "Описание"}'
 
 Изменить данные города:
 PUT запрос по адресу
 localhost:8080/telegrambot/update
 в параметрах city={id:идентификатор; name:'название города', description:'описание'}
 Пример:
-curl -X PUT localhost:8080/telegrambot/city/update -H 'Content-type:application/json' -d '{"name": "Мадрид", "description": "gardener"}'
+curl -X PUT localhost:8080/telegrambot/city/update -H 'Content-type:application/json' -d '{"name": "Город", "description": "Описание"}'
 
 Для запуск бота перейдите в телеграме по адресу http://t.me/VH5PtAR2U2PsszsTnSlpUyjA0_bot
 

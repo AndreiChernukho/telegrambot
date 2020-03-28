@@ -3,13 +3,14 @@ package com.company.telegrambot.city.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Город.
  */
 @Entity
 @Table(name = "city")
-public class City {
+public class City implements Serializable {
 
     /**
      * Идентификатор.

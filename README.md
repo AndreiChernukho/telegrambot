@@ -1,9 +1,9 @@
 # Telegrambot
 
-**Для запуска приложения необходимо в командной строке из дериктории где находится pom.xml запустить**
+**Для запуска приложения необходимо в командной строке из директории, где находится pom.xml запустить**
 > mvn spring-boot:run
 
-Приложение запустится по адресу localhost:8080/telegrambot
+Приложение запускается по адресу localhost:8080/telegrambot
 
 ## Rest API:
 ### Получить список городов:
@@ -30,7 +30,7 @@ id - идентификатор города
 > curl -X DELETE localhost:8080/telegrambot/city/delete/8b8753ad-a11a-4d71-b04d-fe82c8059b3a
 
 ### Сохранить новый город:
-POST запрос по адресу localhost:8080/telegrambot/create
+POST запрос по адресу localhost:8080/telegrambot/city/create
 
 в параметрах city={name:'название города', description:'описание'}
 
@@ -38,7 +38,7 @@ POST запрос по адресу localhost:8080/telegrambot/create
 > curl -X POST localhost:8080/telegrambot/city/create -H 'Content-type:application/json' -d {"name":"Город","description":"Описание"}
 
 ### Изменить данные города:
-PUT запрос по адресу localhost:8080/telegrambot/update
+PUT запрос по адресу localhost:8080/telegrambot/city/update
 
 в параметрах city={id:идентификатор; name:'название города', description:'описание'}
 

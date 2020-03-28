@@ -30,7 +30,9 @@ public class CityServiceImpl implements CityService {
     @Transactional(readOnly = true)
     @Override
     public City get(String id) {
-        return repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Not found"));
+        return repository
+                .findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(String.format("City not found with id: %s ", id)));
     }
 
     @Override
@@ -45,7 +47,11 @@ public class CityServiceImpl implements CityService {
     @Transactional
     @Override
     public void delete(String id) {
-        repository.deleteById(id);
+        City city = repository.
+                findById(id).
+                orElseThrow(() -> new IllegalStateException(String.format("City with id '%s' does not exist", id)));
+
+        repository.delete(city);
     }
 
     @Transactional

@@ -25,7 +25,7 @@
         <jackson.version>2.10.1</jackson.version>
         <jacksonanotation.version>2.10.1</jacksonanotation.version>
         <commonio.version>2.6</commonio.version>
-        <spring.boot.starter>2.1.8.RELEASE</spring.boot.starter>
+        <spring.boot.starter>2.5.12</spring.boot.starter>
         <telegrambots.version>4.4.0.2</telegrambots.version>
     </properties>
 
